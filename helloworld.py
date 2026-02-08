@@ -3,14 +3,20 @@ import math
 from bs4 import BeautifulSoup
 
 def scrape_mumbai_temperature():
-    """Scrape the current temperature for Mumbai from wttr.in"""
+    """Scrape the current temperature for Mumbai from Open-Meteo API"""
     try:
-        # Using wttr.in API (public, no authentication required)
-        url = "https://wttr.in/Mumbai?format=j1"
-        response = requests.get(url, timeout=10)
+        # Using Open-Meteo API (reliable public API, no authentication required)
+        url = "https://api.open-meteo.com/v1/forecast"
+        params = {
+            "latitude": 19.0760,
+            "longitude": 72.8777,
+            "current": "temperature_2m",
+            "timezone": "Asia/Kolkata"
+        }
+        response = requests.get(url, params=params, timeout=15)
         response.raise_for_status()
         data = response.json()
-        temperature = data["current_condition"][0]["temp_C"]
+        temperature = data["current"]["temperature_2m"]
         return temperature
     except Exception as e:
         print(f"Error scraping temperature: {e}")
