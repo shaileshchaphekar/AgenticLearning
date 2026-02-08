@@ -7,7 +7,7 @@ A serverless AI agent that leverages ChatGPT to help you record financial transa
 ✅ **Natural Language Input** - Describe transactions conversationally  
 ✅ **Intelligent Extraction** - Automatically extracts transaction details  
 ✅ **Excel Export** - Stores transactions in formatted Excel on S3  
-✅ **ChatGPT Integration** - Uses OpenAI's GPT-4 for smart conversations  
+✅ **ChatGPT Integration** - Uses OpenAI's GPT-5.2 for smart conversations  
 ✅ **Serverless** - Runs on AWS Lambda (minimal cost)  
 ✅ **Validation** - Automatic input validation and error handling  
 ✅ **Confirmation** - Agent confirms details before saving  
@@ -31,7 +31,7 @@ A serverless AI agent that leverages ChatGPT to help you record financial transa
          │
          ▼
 ┌─────────────────────────────┐
-│   OpenAI API                │ (GPT-4 with function calling)
+│   OpenAI API                │ (GPT-5.2 with function calling)
 └────────┬────────────────────┘
          │
          ▼
@@ -100,7 +100,7 @@ Transaction ID: A7F2K9X1"
 
 - Python 3.9+
 - AWS Account (free tier eligible)
-- OpenAI API key (GPT-4 access)
+- OpenAI API key (GPT-5.2 access)
 - Installed packages:
   - boto3 (AWS SDK)
   - openpyxl (Excel handling)
@@ -136,7 +136,7 @@ The agent creates an Excel file with this structure:
 ```
 1. User describes transaction to ChatGPT
        ↓
-2. GPT-4 extracts details using function calling
+2. GPT-5.2 extracts details using function calling
        ↓
 3. Lambda function validates inputs
        ↓
@@ -210,21 +210,9 @@ pip install -r requirements.txt
 
 ## 🔗 Integration Methods
 
-### 1. OpenAI Assistant API
-```python
-from openai_integration import create_assistant
-assistant_id = create_assistant()
-```
+## 📝 API Endpoint
 
-### 2. Custom GPT (ChatGPT)
-- Create custom GPT at https://chatgpt.com/gpts
-- Add action with Lambda endpoint
-- Configure function schema
-
-### 3. Direct API Calls
-Use the Lambda API Gateway endpoint directly
-
-## 📈 Future Enhancements
+### Record Transaction
 
 - [ ] Multi-user support
 - [ ] Transaction categories

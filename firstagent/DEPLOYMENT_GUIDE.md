@@ -16,7 +16,7 @@ AWS S3 (Excel File)
 
 ## Prerequisites
 - AWS Account with S3 and Lambda access
-- OpenAI API key (for GPT-4 access)
+- OpenAI API key (for GPT-5.2 access)
 - Python 3.9+
 - AWS CLI configured
 
@@ -167,7 +167,7 @@ pip install -r requirements.txt
 
 ### OpenAI API Errors
 - Verify API key is correct
-- Check account has GPT-4 access
+- Check account has GPT-5.2 access
 - Monitor rate limits
 
 ## Cost Estimation

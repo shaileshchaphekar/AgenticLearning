@@ -87,7 +87,7 @@ Be friendly, professional, and accurate. Always confirm all details before recor
     
     # Call OpenAI Assistant API
     response = openai.ChatCompletion.create(
-        model="gpt-4",
+        model="gpt-5.2",
         messages=[
             {"role": "system", "content": system_prompt},
             *conversation_history
