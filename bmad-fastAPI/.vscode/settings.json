@@ -1,0 +1,9 @@
+{
+  "files.autoSave": "onFocusChange",
+  "editor.wordWrap": "on",
+  "markdown.preview.openByDefault": true,
+  "editor.minimap.enabled": false,
+  "files.exclude": {
+    "**/__pycache__": true
+  }
+}
